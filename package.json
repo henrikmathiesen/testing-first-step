@@ -18,6 +18,11 @@
   "homepage": "https://github.com/henrikmathiesen/testingFirstStep#readme",
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-jasmine": "^2.2.1"
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.0",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-jasmine": "^0.3.6",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "phantomjs": "^1.9.19"
   }
 }

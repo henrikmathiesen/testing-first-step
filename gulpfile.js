@@ -1,11 +1,11 @@
+/* global __dirname */
 var gulp = require('gulp');
-var jasmine = require('gulp-jasmine');
+var Server = require('karma').Server;
 
-var jsTstSrc = './js/tst/**/*.js';
-
-gulp.task('test', function () {
-	return gulp.src(jsTstSrc) 
-		.pipe(jasmine({
-			verbose: true
-		}));
+gulp.task('test', function (done) {
+  new Server({
+    configFile: __dirname + '/karma.conf.js',
+    singleRun: true,
+    verbose: true
+  }, done).start();
 });
