@@ -4,6 +4,7 @@
 	There is currently no good way to get to source code functions
 	from revealing module pattern. We need to find a better system.
 	
+	UPDATE
 	
 	Jasmine, Karma and Karma Browsers with Gulp
 	
@@ -20,14 +21,12 @@
 
 */
 
-var helloworld = function(){
-	return "Hello World";
-};
+
 
 describe("Hello World", function(){
 	
 	it("should return the string hello world", function(){
-		expect(helloworld()).toEqual("Hello World");
+		expect(window.app.helloWorld()).toEqual("Hello World");
 	});
 	
 });
