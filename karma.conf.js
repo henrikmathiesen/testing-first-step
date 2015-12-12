@@ -6,6 +6,7 @@ module.exports = function(config) {
     files: [
       './bower_components/jquery/dist/jquery.js',
       './js/src/**/*.js',
+      './js/tst/fixtures/**/*.html',
       './js/tst/**/*.js'
     ]
   });
