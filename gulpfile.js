@@ -5,5 +5,7 @@ var jsTstSrc = './js/tst/**/*.js';
 
 gulp.task('test', function () {
 	return gulp.src(jsTstSrc) 
-		.pipe(jasmine());
+		.pipe(jasmine({
+			verbose: true
+		}));
 });
