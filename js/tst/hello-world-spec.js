@@ -10,7 +10,7 @@
 	
 	- Jasmine is a framework for running tests
 		* It can work with javascript files through the require system
-		* It has hower no access to the web browser and a web applications referenced javascript files
+		* It has however no access to the web browser and a web applications referenced javascript files
 		
 	- Karma is a framework for running tests, such as jasmine tests, in a browser environment
 		* It has a built in web server
