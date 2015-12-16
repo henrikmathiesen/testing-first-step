@@ -3,7 +3,7 @@
 /*
 
 	- Updated karma.conf.js with path to fixtures
-	- Get server path to static fixture files
+	- Get Karmas server path to static fixture files and give to Jasmine
 
 */
 

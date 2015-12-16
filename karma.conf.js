@@ -7,7 +7,11 @@ module.exports = function(config) {
       './bower_components/jquery/dist/jquery.js',
       './js/src/**/*.js',
       './js/tst/fixtures/**/*.html',
-      './js/tst/**/*.js'
+      './js/tst/**/*.js',
+      
+      // Koans
+      './js/tst-koans/AboutExpects.js',
+      './js/tst-koans/AboutArrays.js'
     ]
   });
   

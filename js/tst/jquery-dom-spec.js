@@ -17,6 +17,8 @@ describe("We should be able to query DOM", function(){
 	
 	it("allows us to search with css selectors", function(){
 		expect(elem.length).toEqual(1);
+		expect(elem.is("#container")).toBeTruthy();
+		expect(elem.find('p').length).toEqual(1);
 	});
 	
 });

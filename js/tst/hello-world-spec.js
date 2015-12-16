@@ -1,6 +1,6 @@
 /*
 
-	We specified out test function inline here
+	We specified our test function inline here
 	There is currently no good way to get to source code functions
 	from revealing module pattern. We need to find a better system.
 	
