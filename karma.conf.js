@@ -11,7 +11,8 @@ module.exports = function(config) {
       
       // Koans
       './js/tst-koans/AboutExpects.js',
-      './js/tst-koans/AboutArrays.js'
+      './js/tst-koans/AboutArrays.js',
+      './js/tst-koans/AboutFunctions.js'
     ]
   });
   
