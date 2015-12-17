@@ -70,18 +70,36 @@ describe("About Arrays", function() {
     
   });
 
-//   it("should slice arrays", function () {
-//     var array = ["peanut", "butter", "and", "jelly"];
-// 
-//     expect(array.slice(0, 1)).toEqual(FILL_ME_IN);
-//     expect(array.slice(0, 2)).toEqual(FILL_ME_IN);
-//     expect(array.slice(2, 2)).toEqual(FILL_ME_IN);
-//     expect(array.slice(2, 20)).toEqual(FILL_ME_IN);
-//     expect(array.slice(3, 0)).toEqual(FILL_ME_IN);
-//     expect(array.slice(3, 100)).toEqual(FILL_ME_IN);
-//     expect(array.slice(5, 1)).toEqual(FILL_ME_IN);
-//   });
-// 
+  it("should slice arrays (the value is returned BUT the array is NOT changed)", function () {
+    var array = ["peanut", "butter", "and", "jelly"];
+
+    expect(array.slice(0, 1)).toEqual(["peanut"]);
+    expect(array.slice(0, 2)).toEqual(["peanut", "butter"]);
+    expect(array.slice(2, 2)).toEqual([]);
+    expect(array.slice(2, 20)).toEqual(["and", "jelly"]);
+    expect(array.slice(3, 0)).toEqual([]);
+    expect(array.slice(3, 100)).toEqual(["jelly"]);
+    expect(array.slice(5, 1)).toEqual([]);
+    
+    expect(array.slice(2)).toEqual(["and", "jelly"]);
+    
+    expect(array.slice(-2)).toEqual(["and", "jelly"]);
+    expect(array.slice(-1)).toEqual(["jelly"]);
+    
+    expect(array).toEqual(["peanut", "butter", "and", "jelly"]);
+    
+  });
+  
+  it("should splice arrays (the value is returned AND the array IS changed)", function(){
+    var array = ["Karl", "Henry", "Henrik", "Matteus"];
+    
+    expect(array.splice(0, 1)).toEqual(["Karl"]);
+    expect(array.splice(-1)).toEqual(["Matteus"]);
+    
+    expect(array).toEqual(["Henry", "Henrik"]);
+    
+  });
+
 //   it("should know array references", function () {
 //     var array = [ "zero", "one", "two", "three", "four", "five" ];
 // 
