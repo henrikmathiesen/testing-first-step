@@ -12,7 +12,9 @@ module.exports = function(config) {
       // Koans
       './js/tst-koans/AboutExpects.js',
       './js/tst-koans/AboutArrays.js',
-      './js/tst-koans/AboutFunctions.js'
+      './js/tst-koans/AboutFunctions.js',
+      // We skip AboutHigherOrderFunctions.js, since it depends on _underscore
+      './js/tst-koans/AboutInheritance.js'
     ]
   });
   
