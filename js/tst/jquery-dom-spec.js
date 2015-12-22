@@ -12,7 +12,7 @@ describe("We should be able to query DOM", function(){
 	var elem;
 	
 	beforeEach(function(){
-		elem = $('<div id="container"><p>Hello World!</p></div>');
+		elem = $('<div id="container"><p>Hello World!</p><span>1</span><span>2</span></div>');
 	});
 	
 	it("allows us to search with css selectors", function(){
@@ -20,5 +20,42 @@ describe("We should be able to query DOM", function(){
 		expect(elem.is("#container")).toBeTruthy();
 		expect(elem.find('p').length).toEqual(1);
 	});
+    
+    it("should find first span with different syntaxes", function(){
+        var firstSpan01 = elem.find('span').first();
+        var firstSpan02 = elem.find('span').eq(0);
+        var firstSpan03 = elem.find('span:eq(0)');
+        //var firstSpan04 = elem.find('span').is('eq(0)'); , wont work
+        
+        expect(firstSpan01.length).toEqual(1);
+        expect(firstSpan01.text()).toEqual("1");
+        
+        expect(firstSpan02.length).toEqual(1);
+        expect(firstSpan02.text()).toEqual("1");
+        
+        expect(firstSpan03.length).toEqual(1);
+        expect(firstSpan03.text()).toEqual("1");
+    });
+    
+    it("should find the last span with different syntaxes", function(){
+        var lastSpan01 = elem.find('span').last();                                  // best really ...
+        var lastSpan02 = elem.find('span').eq((elem.find('span').length - 1));      // cumbersume
+        var lastSpan03 = elem.find('span').eq(-1);                                  // better
+        
+        expect(lastSpan01.length).toEqual(1);
+        expect(lastSpan01.text()).toEqual("2");
+        
+        expect(lastSpan02.length).toEqual(1);
+        expect(lastSpan02.text()).toEqual("2");
+        
+        expect(lastSpan03.length).toEqual(1);
+        expect(lastSpan03.text()).toEqual("2");
+    });
 	
+    it("should find the first element IF it is a p tag", function(){
+        var firstP01 = elem.find('p').eq(0);
+        
+        expect(firstP01.length).toEqual(1);
+    });
+    
 });
