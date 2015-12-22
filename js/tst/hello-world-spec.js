@@ -14,6 +14,7 @@
 		
 	- Karma is a framework for running tests, such as jasmine tests, in a browser environment
 		* It has a built in web server
+        * Karma works together with Jasmine for testing vanilla javascript and libraries such as jquery, see package.json for depencies for getting it to work
 		* We specify what browser to use, what testing framework to use and which files to include in the test (tests and their dependecies) in karma.conf.js
 		* We run the tests with Gulp
 	
