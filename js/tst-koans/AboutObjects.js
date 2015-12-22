@@ -73,7 +73,7 @@ describe("About Objects", function () {
       expect(hasDetonator).toBe(false);
     });
     
-    it("should the Henry and the property should be false", function(){
+    it("should have the Henry and the property should be false", function(){
         var hasHenry = "theHenry" in megalomaniac;
         
         expect(hasHenry).toEqual(true);
