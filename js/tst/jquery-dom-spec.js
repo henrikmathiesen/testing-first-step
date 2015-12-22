@@ -10,9 +10,11 @@
 describe("We should be able to query DOM", function(){
 	
 	var elem;
+    var elem02;
 	
 	beforeEach(function(){
 		elem = $('<div id="container"><p>Hello World!</p><span>1</span><span>2</span></div>');
+        elem02 = $('<div><span style="display:none;">Adam</span><span>Bertil</span></div>')
 	});
 	
 	it("allows us to search with css selectors", function(){
@@ -56,6 +58,21 @@ describe("We should be able to query DOM", function(){
         var firstP01 = elem.find('p').eq(0);
         
         expect(firstP01.length).toEqual(1);
+        expect(firstP01.is(':first-child')).toEqual(true);                           // REMEMBER, .is() RETURNS A BOOLEAN
+    });
+    
+    it("should find the last element IF it is a span tag", function(){
+        var lastSpan01 = elem02.find('span').eq(-1);
+        
+        expect(lastSpan01.length).toEqual(1);
+        expect(lastSpan01.is(':last-child')).toEqual(true);
+    });
+    
+    it("should find spans that is not last child", function(){
+        var notLastSpans01 = elem02.find('span').not(':last-child');                // REMEMBER .not() IS A SELECTOR FILTER
+        
+        expect(notLastSpans01.length).toEqual(1);
+        expect(notLastSpans01.text()).toEqual("Adam");
     });
     
 });

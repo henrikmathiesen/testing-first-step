@@ -15,7 +15,8 @@ module.exports = function(config) {
       './js/tst-koans/AboutFunctions.js',
       // We skip AboutHigherOrderFunctions.js, since it depends on _underscore
       './js/tst-koans/AboutInheritance.js',
-      './js/tst-koans/AboutMutability.js'
+      './js/tst-koans/AboutMutability.js',
+      './js/tst-koans/AboutObjects.js'
     ]
   });
   
