@@ -42,6 +42,9 @@ describe("About inheritance", function() {
   });
 });
 
+
+// THIS BREAKS JQUERY, SO DONT REALLY WONT TO LEARN IT RIGHT NOW
+// http://stackoverflow.com/questions/1827458/prototyping-object-in-javascript-breaks-jquery
  
 // http://javascript.crockford.com/prototypal.html
 // Object.prototype.beget = function () {
@@ -49,7 +52,7 @@ describe("About inheritance", function() {
 //   F.prototype = this;
 //   return new F();
 // }
-
+// 
 // function Gonzo(age, hobby, trick) {
 //   Muppet.call(this, age, hobby);
 //   this.trick = trick;
