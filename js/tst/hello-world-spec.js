@@ -10,9 +10,9 @@
 	
 	- Jasmine is a framework for running tests
 		* It can work with javascript files through the require system
-		* It has however no access to the web browser and a web applications referenced javascript files
+		* It has however no access to the web browser and a web applications referenced javascript files -- if run from a commandprompt / gulp
 		
-	- Karma is a framework for running tests, such as jasmine tests, in a browser environment
+	- Karma is a framework for running tests, such as jasmine tests, in a browser environment -- from the command prompt / gulp
 		* It has a built in web server
         * Karma works together with Jasmine for testing vanilla javascript and libraries such as jquery, see package.json for depencies for getting it to work
 		* We specify what browser to use, what testing framework to use and which files to include in the test (tests and their dependecies) in karma.conf.js
