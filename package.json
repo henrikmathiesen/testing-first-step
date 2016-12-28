@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/henrikmathiesen/testingFirstStep.git"
+    "url": "git+https://github.com/henrikmathiesen/testing-first-step.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/henrikmathiesen/testingFirstStep/issues"
+    "url": "https://github.com/henrikmathiesen/testing-first-step/issues"
   },
-  "homepage": "https://github.com/henrikmathiesen/testingFirstStep#readme",
+  "homepage": "https://github.com/henrikmathiesen/testing-first-step#readme",
   "devDependencies": {
     "gulp": "^3.9.0",
     "jasmine-core": "^2.4.1",
